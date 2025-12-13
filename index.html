@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTTC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+
+
+<style>
+
+/* ============================ PTTC Hero CSS =============================== */
+
+.pttc-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 0;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+}
+
+.pttc-hero-content {
+  max-width: 600px;
+}
+
+.pttc-hero-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pttc-hero-content p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.enroll-btn {
+  padding: 15px 30px;
+  background-color: #fca311;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.enroll-btn:hover {
+  background-color: #e59400;
+}
+
+.pttc-hero-image img {
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .pttc-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .pttc-hero-image {
+    margin-bottom: 30px;
+  }
+  .pttc-hero-image img {
+    max-width: 100%;
+  }
+}
+
+/* ============================ PTTC Program Overview CSS =============================== */
+
+.pttc-overview {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.pttc-overview-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pttc-overview-subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 40px auto;
+}
+
+.pttc-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.pttc-overview-box {
+  background: #f7f9fc;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.pttc-overview-box:hover {
+  transform: translateY(-8px);
+}
+
+.pttc-overview-box i {
+  font-size: 40px;
+  color: #fca311;
+  margin-bottom: 15px;
+}
+
+.pttc-overview-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.pttc-overview-box p {
+  font-size: 15px;
+  color: #555;
+}
+
+@media screen and (max-width: 991px) {
+  .pttc-overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pttc-overview-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ============================ Why PTTC CSS =============================== */
+
+.pttc-why {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.pttc-why-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pttc-why-subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 40px auto;
+}
+
+.pttc-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.pttc-why-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.07);
+  transition: 0.3s ease;
+}
+
+.pttc-why-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+}
+
+.pttc-why-box i {
+  font-size: 40px;
+  color: #fca311;
+  margin-bottom: 15px;
+}
+
+.pttc-why-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.pttc-why-box p {
+  font-size: 15px;
+  color: #555;
+}
+
+@media screen and (max-width: 991px) {
+  .pttc-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pttc-why-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* ===================== .pttc-slider-section SECTION ===================== */
+/* 
+body {
+  font-family: "Libre Baskerville", serif;
+  background: #f7f9fc;
+  color: #1f2937;
+} */
+
+
+.pttc-slider-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* ================= SLIDER ================= */
+
+.slide.active {
+  transform: scale(1.08);
+  border-color: #ff8c42;
+  box-shadow: 0 20px 45px rgba(255, 140, 66, 0.35);
+  z-index: 2; /* 👈 overlap fix */
+}
+
+.pttc-slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  padding: 0 60px; /* 👈 important for cut issue */
+}
+
+.slide:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* Track */
+.slider-track {
+  display: flex;
+  gap: 28px;
+  overflow: hidden;        /* 👈 auto ki jagah hidden */
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Slide Card */
+.slide {
+  min-width: 320px;
+  max-width: 320px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 30px;
+  border: 2px solid #e5e7eb;
+  flex-shrink: 0;
+  text-align: center;
+  cursor: grab;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.slide:not(.active) {
+  opacity: 0.75;
+}
+
+.slide:active {
+  cursor: grabbing;
+}
+
+.slide:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Step Number */
+.step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8c42, #ffcf5c);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* Content */
+.slide h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.slide p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* ================= NAV BUTTONS ================= */
+.nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #3f6ae1;
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #2f54c6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 260px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+/* =============================== Benefits of Joining PTTC ============================= */
+
+.pttc-only-benefits {
+  padding: 80px 0;
+  background: #fff7e6;
+}
+
+.benefits-heading {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.benefits-subheading {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.benefits-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.benefit-box {
+  background: #ffffff;
+  width: 320px;
+  padding: 35px 25px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.benefit-box:hover {
+  transform: translateY(-10px);
+}
+
+.benefit-icon {
+  font-size: 46px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.benefit-box h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.benefit-box p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+/* ====================== Enrollment Process Section ================== */
+
+.pttc-enrollment {
+  padding: 80px 0;
+  background: #f2f9ff;
+}
+
+.enroll-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.enroll-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 55px;
+}
+
+.enroll-steps {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.enroll-step {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.step-number {
+  min-width: 60px;
+  height: 60px;
+  background: #4f6df5;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+.step-content h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.step-content p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .enroll-step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-number {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+
+/* =============================== FAQs Section ============================= */
+
+.pttc-faq {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.faq-subtitle {
+  text-align: center;
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.faq-accordion {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #f7f9ff;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  border: 1px solid #e6ebff;
+  transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+  background: #eef2ff;
+}
+
+.faq-item summary {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 30px;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  color: #4f6df5;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  margin-top: 12px;
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Remove default arrow */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 30px;
+  }
+}
+
+
+/*======================= PTTC – Contact / Enquiry Section ======================*/
+.pttc-contact {
+  padding: 90px 0;
+  background: linear-gradient(135deg, #f7f9ff, #eef3ff);
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-info h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.contact-info p {
+  font-size: 16.5px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Form */
+.contact-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 14px 16px;
+  font-size: 15.5px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #4f6df5;
+}
+
+/* CTA Button */
+.contact-form button {
+  background: #4f6df5;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #3c56d8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+
+/*========================== CTA Banner Section ==========================*/
+
+.pttc-cta-banner {
+  padding: 80px 0;
+  background: linear-gradient(120deg, #4f6df5, #7b8cff);
+  color: #fff;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.cta-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.cta-primary {
+  background: #ffffff;
+  color: #4f6df5;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.cta-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-secondary:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cta-content h2 {
+    font-size: 30px;
+  }
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<section>
+    <div class="top-bar">
+        Call us @ +91 1800 4120 1580
+    </div>
+</section>
+<!-- ============================ navbar =============================== -->
+<section>
+  <div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Spacece Logo">
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Programs -->
+            <li class="dropdown">
+                <a href="#">Programs <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                </ul>
+            </li>
+
+            <!-- PTTC -->
+            <li><a href="PTTC.html">PTTC</a></li>
+
+            <!-- Admissions -->
+            <li class="dropdown">
+                <a href="Admission.html">Admissions</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="dropdown">
+                <a href="Aboutus.html">About Us <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="Aboutus/Our_Team.html">Our Team</a></li>
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li class="dropdown">
+                <a href="Resources.html">Resources <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="Resources/Parent_guides.html">Parent Guides</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+        <!-- Enquire Button -->
+        <a class="enquire-btn" href="javascript:void(0)" onclick="openPopup()">Enquire Now</a>
+
+        <!-- POPUP OVERLAY -->
+        <div class="popup-overlay" id="popup">
+            <div class="popup-box">
+
+                <!-- Close Button -->
+                <button class="close-popup" onclick="closePopup()">×</button>
+
+                <!-- ZOHO FORM STARTS HERE -->
+                <form action="https://forms.zohopublic.com/kidoenterprises/form/KreedoWebsiteContactUsForm/formperma/UxHWZ_P2f6BEfg5Q5jJFP8txtfC_XkHyoDowK3rbSIA/htmlRecords/submit"
+                    name="form" method="POST" id="form" accept-charset="UTF-8" class="enquire_form">
+
+
+                    <h2>Please fill out the form below and we will respond within 24hrs</h2>
+
+                    <!-- Hidden UTM Fields -->
+                    <input type="hidden" name="zf_referrer_name">
+                    <input type="hidden" name="zf_redirect_url">
+                    <input type="hidden" name="zc_gad">
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="utm_device" id="utm_device">
+                    <input type="hidden" name="utm_Adgroup" id="utm_Adgroup">
+                    <input type="hidden" name="gclid" id="gclid">
+                    <input type="hidden" name="referrername" id="referrername">
+
+                    <!-- Inputs -->
+                    <input type="text" name="SingleLine" placeholder="Enter your name" required>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required>
+                    <input type="text" name="PhoneNumber_countrycode" pattern="[0-9]{10}" placeholder="Number" required>
+
+                    <select name="Dropdown" required>
+                        <option value="">Select State</option>
+                        <option>Maharashtra</option>
+                        <option>Gujarat</option>
+                    </select>
+
+                    <select name="Dropdown1" required>
+                        <option value="">Category</option>
+                        <option value="Individual">Starting a new school</option>
+                        <option value="K-12 School">Upgrading my school</option>
+                        <option value="Teacher">Interested in Teacher Training Course</option>
+                    </select>
+
+                    <textarea name="MultiLine" placeholder="Message"></textarea>
+
+                    <!-- Captcha -->
+                    <span id="captchaText">IqOmSl</span>
+                    <input type="text" placeholder="Enter the above text" required>
+
+                    <!-- Checkbox -->
+                    <label class="check-label">
+                        <input type="checkbox" checked>
+                        Please contact me via WhatsApp, SMS, Phone, and Email
+                    </label>
+
+                    <!-- Submit -->
+                    <button class="zf-submitColor">Submit</button>
+                </form>
+                <!-- 🔥 ZOHO FORM ENDS HERE -->
+            </div>
+        </div>
+
+
+        <!-- Mobile Menu Icon -->
+        <!-- <button class="menu-btn" onclick="openMenu()">☰</button> -->
+        <button class="menu-btn">☰</button>
+    </nav>
+
+    <!-- BLACK OVERLAY -->
+    <!-- <div class="overlay" onclick="closeMenu()"></div> -->
+     <div class="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <nav class="menu_btn_info">
+        <button class="close-btn">×</button>
+
+        <div class="slider_logo">
+            <img src="assets/logo.png" alt="Spacece Logo">
+        </div>
+        <ul class="slider_menu nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Programs -->
+            <li class="slider_menu dropdown">
+                <a href="#">Programs <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="slider_menu dropdown-menu">
+                    <li><a href="Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                </ul>
+            </li>
+
+            <!-- PTTC -->
+            <li><a href="PTTC.html">PTTC</a></li>
+
+            <!-- Admissions -->
+            <li class="sliderbar_menu dropdown">
+                <a href="Admission.html">Admissions</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="sliderbar_menu dropdown">
+                <a href="Aboutus/Aboutus.html">About Us <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="sliderbar_menu dropdown-menu">
+                    <li><a href="Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="Aboutus/Our_Team.html">Our Team</a></li>
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li class="sliderbar_menu dropdown">
+                <a href="#">Resources <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="sliderbar_menu dropdown-menu">
+                    <li><a href="Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="Resources/Parent_guides.html">Parent Guides</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<!-- ============================ PTTC Hero Section =============================== -->
+<section>
+  <div class="container">
+    <div class="pttc-hero">
+      <div class="pttc-hero-content">
+        <h1>Empowering Educators, Transforming Classrooms</h1>
+        <p>Join our PTTC program to enhance your teaching skills and bring joyful learning to your school.</p>
+        <a class="enroll-btn" href="javascript:void(0)" onclick="openPopup()">Enroll Now</a>
+      </div>
+      <div class="pttc-hero-image">
+        <img src="assets/pttc_hero.jpg" alt="PTTC Training Session">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PTTC Program Overview =============================== -->
+<section>
+  <div class="container">
+    <div class="pttc-overview">
+
+      <h2 class="pttc-overview-title">PTTC Program Overview</h2>
+      <p class="pttc-overview-subtitle">
+        Our Preschool Teacher Training Course equips educators with the skills needed 
+        to bring activity-based learning and joyful teaching into classrooms.
+      </p>
+
+      <div class="pttc-overview-grid">
+
+        <!-- WHO CAN JOIN -->
+        <div class="pttc-overview-box">
+          <i class="fa-solid fa-user-graduate"></i>
+          <h3>Who Can Join?</h3>
+          <p>Preschool teachers, aspiring educators, and early childhood professionals.</p>
+        </div>
+
+        <!-- DURATION -->
+        <div class="pttc-overview-box">
+          <i class="fa-solid fa-calendar-check"></i>
+          <h3>Duration</h3>
+          <p>3 Months (Flexible schedule with weekly modules).</p>
+        </div>
+
+        <!-- MODE -->
+        <div class="pttc-overview-box">
+          <i class="fa-solid fa-laptop-file"></i>
+          <h3>Mode of Training</h3>
+          <p>Online, In-person, or Hybrid training sessions.</p>
+        </div>
+
+        <!-- BENEFITS -->
+        <div class="pttc-overview-box">
+          <i class="fa-solid fa-check-circle"></i>
+          <h3>Key Benefits</h3>
+          <p>Certification, practical classroom skills, activity-based teaching tools.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Why PTTC Section =============================== -->
+<section>
+  <div class="container">
+    <div class="pttc-why">
+
+      <h2 class="pttc-why-title">Why Choose PTTC?</h2>
+      <p class="pttc-why-subtitle">
+        Our Teacher Training Program empowers educators with modern teaching tools, 
+        hands-on learning strategies, and globally aligned methodologies.
+      </p>
+
+      <div class="pttc-why-grid">
+
+        <!-- Professional Development -->
+        <div class="pttc-why-box">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <h3>Professional Development</h3>
+          <p>Enhance your teaching skills with structured training and expert guidance.</p>
+        </div>
+
+        <!-- World-Class Methods -->
+        <div class="pttc-why-box">
+          <i class="fa-solid fa-globe"></i>
+          <h3>World-Class Teaching Methods</h3>
+          <p>Learn modern, activity-based, child-centric teaching techniques.</p>
+        </div>
+
+        <!-- Certification -->
+        <div class="pttc-why-box">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Certification for Growth</h3>
+          <p>Earn a recognized certification that boosts your career and opportunities.</p>
+        </div>
+
+        <!-- Classroom Impact -->
+        <div class="pttc-why-box">
+          <i class="fa-solid fa-children"></i>
+          <h3>Better Classroom Impact</h3>
+          <p>Apply practical strategies that engage children and improve learning outcomes.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 4. Curriculum & Modules (Progress + Zigzag Combined) =============================== -->
+
+<section class="pttc-slider-section">
+  <div class="container">
+    <h2 class="section-title">PTTC Training Journey</h2>
+
+    <div class="pttc-slider">
+      <button class="nav-btn prev">‹</button>
+
+      <div class="slider-track">
+
+        <div class="slide">
+          <span class="step">01</span>
+          <h3>Foundations of Early Childhood</h3>
+          <p>Child development, early learning theories & DAP methods.</p>
+        </div>
+
+        <div class="slide">
+          <span class="step">02</span>
+          <h3>Kreedo Learning System</h3>
+          <p>Activity-based learning & experiential classroom methods.</p>
+        </div>
+
+        <div class="slide">
+          <span class="step">03</span>
+          <h3>Classroom Management</h3>
+          <p>Managing groups, routines & positive discipline.</p>
+        </div>
+
+        <div class="slide">
+          <span class="step">04</span>
+          <h3>Lesson Planning</h3>
+          <p>Using Kreedo materials & structuring lessons.</p>
+        </div>
+
+        <div class="slide">
+          <span class="step">05</span>
+          <h3>Practical Teaching</h3>
+          <p>Live demos, real classroom practice & feedback.</p>
+        </div>
+
+        <div class="slide">
+          <span class="step">06</span>
+          <h3>Assessment & Certification</h3>
+          <p>Child assessment + final certification process.</p>
+        </div>
+
+      </div>
+
+      <button class="nav-btn next">›</button>
+    </div>
+  </div>
+</section>
+
+<!--- =============================== Benefits of Joining PTTC =============================-->
+
+<section class="pttc-only-benefits">
+  <div class="container">
+
+    <h2 class="benefits-heading">Benefits of Joining PTTC</h2>
+    <p class="benefits-subheading">
+      Empower yourself with the skills to create joyful learning experiences for young children
+    </p>
+
+    <div class="benefits-cards">
+
+      <div class="benefit-box">
+        <span class="benefit-icon">🎓</span>
+        <h3>Enhance Teaching Skills</h3>
+        <p>Learn modern, activity-based teaching methods designed specially for early learners.</p>
+      </div>
+
+      <div class="benefit-box">
+        <span class="benefit-icon">😊</span>
+        <h3>Boost Student Engagement</h3>
+        <p>Create happy, interactive classrooms where children enjoy learning every day.</p>
+      </div>
+
+      <div class="benefit-box">
+        <span class="benefit-icon">📦</span>
+        <h3>Ready-to-Use Learning Kits</h3>
+        <p>Get access to structured lesson plans and child-friendly learning materials.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!--- =============================== FAQs Section =============================-->
+
+<section class="pttc-faq">
+  <div class="container">
+
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <p class="faq-subtitle">
+      Everything you need to know about our PTTC Program
+    </p>
+
+    <div class="faq-accordion">
+
+      <details class="faq-item">
+        <summary>Do I need prior teaching experience?</summary>
+        <p>
+          No prior teaching experience is required. The PTTC program is designed
+          for beginners as well as existing preschool teachers.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is the PTTC program online or offline?</summary>
+        <p>
+          The program is available in both online and in-person modes, depending
+          on your location and preference.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the duration of the PTTC course?</summary>
+        <p>
+          The PTTC program runs for 3 months, including training sessions,
+          practical learning, and assessments.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What certification will I receive?</summary>
+        <p>
+          Upon successful completion, you will receive a Kreedo PTTC
+          Certification that supports your professional growth.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Will I get teaching materials during the course?</summary>
+        <p>
+          Yes, participants get access to structured curriculum resources and
+          activity-based learning materials.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================== Enrollment Process Section ================== -->
+
+<section class="pttc-enrollment">
+  <div class="container">
+
+    <h2 class="enroll-title">Enrollment Process</h2>
+    <p class="enroll-subtitle">
+      Start your PTTC journey in just a few simple steps
+    </p>
+
+    <div class="enroll-steps">
+
+      <div class="enroll-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Register Online</h3>
+          <p>Fill out the enrollment form and share your basic details.</p>
+        </div>
+      </div>
+
+      <div class="enroll-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Attend Orientation</h3>
+          <p>Join an introductory session to understand the PTTC program.</p>
+        </div>
+      </div>
+
+      <div class="enroll-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Complete Training Modules</h3>
+          <p>Learn through guided lessons, activities, and practical sessions.</p>
+        </div>
+      </div>
+
+      <div class="enroll-step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Get Certified</h3>
+          <p>Receive your PTTC certification after successful completion.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================== Contact / Enquiry Section ============================= -->
+<section class="pttc-contact">
+  <div class="container">
+
+    <div class="contact-wrapper">
+
+      <!-- Left Content -->
+      <div class="contact-info">
+        <h2>Get in Touch for PTTC</h2>
+        <p>
+          Ready to begin your journey as a confident preschool educator?
+          Fill in the form and our team will connect with you shortly.
+        </p>
+
+        <ul>
+          <li>✔ Certified PTTC Program</li>
+          <li>✔ Online & In-Person Options</li>
+          <li>✔ Activity-Based Learning Approach</li>
+        </ul>
+      </div>
+
+      <!-- Right Form -->
+      <div class="contact-form">
+        <form>
+
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="tel" placeholder="Phone Number" required>
+
+          <select required>
+            <option value="">Select Program</option>
+            <option>PTTC – Preschool Teacher Training</option>
+            <option>Starting a Preschool</option>
+            <option>Upgrading My School</option>
+          </select>
+
+          <textarea placeholder="Your Message"></textarea>
+
+          <button type="submit">Enroll Now</button>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================== CTA Banner Section ============================= -->
+<section class="pttc-cta-banner">
+  <div class="container">
+
+    <div class="cta-content">
+      <h2>Start Your Journey as a Certified Preschool Educator Today!</h2>
+      <p>
+        Join Kreedo’s PTTC program and build the skills to inspire joyful
+        learning in young children.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="#enroll" class="cta-primary">Enroll Now</a>
+        <a href="#contact" class="cta-secondary">Talk to an Expert</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================  Footer  =============================== -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <!-- Column 1: Logo + Social -->
+        <div class="footer-section">
+            <img src="assets/logo.png" class="footer-logo" alt="Preschool Logo">
+
+            <p class="footer-text">
+                Building bright futures with joyful learning.
+            </p>
+
+            <!-- Google Map -->
+            <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.713390921391!2d73.80806407371841!3d18.45131787128889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc29513dc000001%3A0x6bcacb06efbe645c!2sSpacECE%20INDIA%20FOUNDATION!5e0!3m2!1sen!2sin!4v1764842317194!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+
+        <!-- Column 2: Contact Form (Parents Admission Inquiry) -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+
+            <form class="footer-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="text" placeholder="Your Phone">
+                <select>
+                    <option>Select Program</option>
+                    <option>Playgroup</option>
+                    <option>Nursery</option>
+                    <option>Jr. KG</option>
+                    <option>Sr. KG</option>
+                </select>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit" class="footer-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="link-wrap">
+              <ul class="footer-links">
+                <li><a href="#">About Preschool</a></li>
+                <li><a href="#">Our Programs</a></li>
+                <li><a href="#">Our Vision</a></li>
+              </ul>
+              <ul class="footer-links">
+                <li><a href="#">Parent Resources</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/SpacECE/"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com/SpacECE/"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/SpacECE/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com/SpacECE/"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.Whatsapp.com/SpacECE/"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        © 2025 Your Preschool Name — All Rights Reserved
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- ============================  Dropdown button  =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".dropdown > a");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdown.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+});
+</script>
+
+<!-- ============================ Slider Menu Button =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menu = document.querySelector(".menu_btn_info");  // RIGHT SIDEBAR
+    const overlay = document.querySelector(".overlay");     // DARK BACKGROUND
+    const menuBtn = document.querySelector(".menu-btn");    // ☰ BUTTON
+    const closeBtn = document.querySelector(".close-btn");  // CROSS BUTTON
+
+    // OPEN MENU
+    menuBtn.addEventListener("click", () => {
+        menu.classList.add("active");
+        overlay.classList.add("show");
+    });
+
+    // CLOSE MENU (X button)
+    closeBtn.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    // CLOSE MENU when clicking outside
+    overlay.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+});
+</script>
+
+<!-- ============================ Slider Dropdown Menu  =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // MOBILE MENU OPEN
+    const menuBtn = document.querySelector(".menu-btn");
+    const sidebar = document.querySelector(".menu_btn_info");
+    const overlay = document.querySelector(".overlay");
+    const closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.add("active");
+        overlay.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    // ⭐ MOBILE DROPDOWN OPEN/CLOSE ON CLICK
+    const dropdowns = document.querySelectorAll(".menu_btn_info .dropdown");
+
+    dropdowns.forEach(drop => {
+        drop.addEventListener("click", function (e) {
+            e.stopPropagation();
+            this.classList.toggle("open");
+        });
+    });
+});
+</script>
+
+<!-- ============================ Equairy form popup-box =============================== -->
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+</script>
+
+<!-- ============================  Curriculum & Modules slider =============================== -->
+
+
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/InertiaPlugin.min.js"></script>
+
+
+<script>
+const track = document.querySelector(".slider-track");
+const slides = gsap.utils.toArray(".slide");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let activeSlide;
+
+/* ================= INIT ================= */
+window.addEventListener("load", () => {
+  const loop = horizontalLoop(slides, {
+    paused: false,
+    draggable: true,
+    center: true,
+    onChange: (el) => {
+      activeSlide && activeSlide.classList.remove("active");
+      el.classList.add("active");
+      activeSlide = el;
+    }
+  });
+
+  // slower + smoother button motion
+  nextBtn.addEventListener("click", () =>
+    loop.next({ duration: 0.9, ease: "power2.out" })
+  );
+
+  prevBtn.addEventListener("click", () =>
+    loop.previous({ duration: 0.9, ease: "power2.out" })
+  );
+});
+
+/* ================= LOOP FUNCTION ================= */
+function horizontalLoop(items, config = {}) {
+  items = gsap.utils.toArray(items);
+
+  let tl = gsap.timeline({
+      repeat: -1,
+      paused: config.paused,
+      defaults: { ease: "none" }
+    }),
+    length = items.length,
+    startX = items[0].offsetLeft,
+    times = [],
+    widths = [],
+    xPercents = [],
+    curIndex = 0,
+
+    /* 🔽 SLOW SPEED FOR KIDS WEBSITE */
+    pixelsPerSecond = 30,
+
+    snap = gsap.utils.snap(1),
+    totalWidth;
+
+  gsap.set(items, { x: 0 });
+
+  function populateWidths() {
+    items.forEach((el, i) => {
+      widths[i] = el.offsetWidth;
+      xPercents[i] = snap(
+        (parseFloat(gsap.getProperty(el, "x", "px")) / widths[i]) * 100
+      );
+    });
+
+    gsap.set(items, {
+      xPercent: i => xPercents[i]
+    });
+
+    totalWidth =
+      items[length - 1].offsetLeft +
+      (xPercents[length - 1] / 100) * widths[length - 1] -
+      startX +
+      widths[length - 1];
+  }
+
+  function populateTimeline() {
+    let i, item, curX, distToStart, distToLoop;
+    tl.clear();
+
+    for (i = 0; i < length; i++) {
+      item = items[i];
+      curX = (xPercents[i] / 100) * widths[i];
+      distToStart = item.offsetLeft + curX - startX;
+      distToLoop = distToStart + widths[i];
+
+      tl.to(item, {
+        xPercent: snap(((curX - distToLoop) / widths[i]) * 100),
+        duration: distToLoop / pixelsPerSecond
+      }, 0)
+      .fromTo(item, {
+        xPercent: snap(((curX - distToLoop + totalWidth) / widths[i]) * 100)
+      }, {
+        xPercent: xPercents[i],
+        duration: (totalWidth - distToLoop) / pixelsPerSecond,
+        immediateRender: false
+      }, distToLoop / pixelsPerSecond)
+      .add("label" + i, distToStart / pixelsPerSecond);
+
+      times[i] = distToStart / pixelsPerSecond;
+    }
+  }
+
+  function toIndex(index, vars = {}) {
+    index = gsap.utils.wrap(0, length, index);
+    curIndex = index;
+    return tl.tweenTo(times[index], vars);
+  }
+
+  populateWidths();
+  populateTimeline();
+
+  /* ================= DRAG (SMOOTH) ================= */
+  if (config.draggable && typeof Draggable === "function") {
+    let proxy = document.createElement("div");
+    let ratio = 1 / totalWidth;
+    let startProgress;
+
+    Draggable.create(proxy, {
+      trigger: track,
+      type: "x",
+      inertia: true,
+      onPressInit() {
+        startProgress = tl.progress();
+        gsap.killTweensOf(tl);
+      },
+      onDrag() {
+        gsap.to(tl, {
+          progress: startProgress + (this.startX - this.x) * ratio,
+          duration: 0.35,
+          ease: "power2.out"
+        });
+      },
+      onThrowUpdate() {
+        gsap.to(tl, {
+          progress: startProgress + (this.startX - this.x) * ratio,
+          duration: 0.35,
+          ease: "power2.out"
+        });
+      }
+    });
+  }
+
+  tl.next = vars => toIndex(curIndex + 1, vars);
+  tl.previous = vars => toIndex(curIndex - 1, vars);
+  tl.current = () => curIndex;
+
+  config.onChange && config.onChange(items[0], 0);
+
+  return tl;
+}
+</script>
+
+
+</body>
+</html>
